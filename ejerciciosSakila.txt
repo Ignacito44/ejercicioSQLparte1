@@ -1,0 +1,82 @@
+
+Base de datos Sakila
+
+1-Muestra los nombres de los actores en orden alfab�tico por su apellido.
+SELECT first_name, last_name from actor 
+order by last_name; 
+
+2-Muestra los nombres de las ciudades en orden alfab�tico.
+SELECT city from city 
+order by city; 
+
+3-Muestra los nombres de las categor�as en orden descendente. 
+SELECT category_id from category 
+order by category_id DESC; 
+
+4-Muestra los t�tulos de las pel�culas en orden alfab�tico.
+SELECT title from film 
+order by title; 
+
+5- Muestra los nombres de los clientes en orden descendente por su apellido.
+SELECT first_name, last_name from customer 
+order by last_name ASC; 
+
+6-Muestra los nombres de los pa�ses en orden alfab�tico.
+SELECT country from country 
+order by country; 
+
+7- Muestra los nombres de los idiomas en orden descendente.
+SELECT name from language 
+order by name DESC; 
+
+8- Muestra los nombres de las tiendas en orden alfab�tico.
+SELECT store_id from store 
+order by store_id; 
+
+9- Muestra los nombres de los staffs en orden descendente por su apellido.
+SELECT first_name, last_name from staff 
+order by last_name DESC; 
+
+10 - Muestra los nombres de las pel�culas en orden alfab�tico inverso.
+SELECT title from film 
+order by title DESC; 
+
+11 - Muestra los nombres de los clientes en orden ascendente por su apellido.
+SELECT first_name, last_name from customer 
+order by last_name asc; 
+
+12- Muestra los nombres de las ciudades en orden descendente.
+SELECT city from city 
+order by city DESC; 
+
+13- Muestra los nombres de las categor�as en orden alfab�tico inverso.
+SELECT name from category 
+order by name DESC; 
+
+14 - Muestra los nombres de las pel�culas en orden descendente.
+SELECT title from film 
+order by title DESC; 
+
+15- Muestra los nombres de los clientes en orden alfab�tico por su nombre.
+SELECT first_name from customer 
+order by first_name; 
+
+16 - Muestra los nombres de los pa�ses en orden descendente.
+SELECT country from country 
+order by country DESC; 
+
+17 - Muestra los nombres de los idiomas en orden alfab�tico inverso.
+SELECT name from language 
+order by name DESC; 
+
+18- Muestra los nombres de las tiendas en orden ascendente.
+SELECT store_id from store 
+order by store_id DESC;  
+
+19- Muestra los nombres de los staffs en orden alfab�tico por su apellido.
+SELECT first_name, last_name from staff 
+order by last_name asc; 
+
+20-Muestra los nombres de las pel�culas en orden descendente inverso.
+SELECT title from film 
+order by title DESC; 
