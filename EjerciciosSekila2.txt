@@ -51,3 +51,66 @@ where rating like "PG" OR "G";
 13. Peliculas con un rating PG y duracion de más de 120.
 SELECT title, rating, length from film
  where rating like "PG" and length > 120; 
+
+ SELET * from "products"
+ where productName is  no full
+
+ operdaor in (abreviacion de operador or)
+
+ SELECT * FROM products
+where SupplierID = 3
+or SupplierID = 4
+or SupplierID = 5
+or SupplierID = 6
+
+SELECT * from products
+where SupplierID in (3,4,5,6)
+
+SELECT * from products
+where SupplierID not in (3,4,5,6)
+
+Funciones de agregacion o agrupacion
+(Estas funciones solo funcionan en la clausula SELECT)
+
+COUNT
+SELECT count(FirstName) from employees; 
+SELECT count(FirstName) as cantidadEmpleados from employees; 
+
+SUM
+SELECT sum(price) FROM `products`; 
+
+PROMEDIO
+SELECT AVG(price) FROM `products`; 
+
+ROUND 
+SELECT ROUND(AVG(price),2) FROM `products`; 
+
+mnimo
+SELECT ProductName , min(price) as Preciominimo from products; 
+
+maximo 
+SELECT ProductName , max(price) as Preciomaximo
+
+ from products; 
+
+ Ejericicios BD SAKILA
+
+ 1 Cuantos actores hay?
+ SELECT COUNT(*) as numeroActores FROM actor; 
+
+ 2 Cunatod countries hay que empiezn por a?
+ SELECT COUNT(country) from country where country like "a%"; 
+
+ 3 Cual es el promedio de duracio de las peliculas con PG
+ SELECT title, avg(length) from film 
+ where rating = "PG"; 
+
+ 4 Suma de rental_date de todas las peliculas
+ SELECT sum(rental_rate) from film; 
+
+ 5 Pelicula con mayor duracion
+ SELECT MAX(length) as Duracion from "film";
+
+ 6 Pelicula con menor duracion
+  SELECT MIN(length) as Duracion from "film";
+
