@@ -114,3 +114,34 @@ SELECT ProductName , max(price) as Preciomaximo
  6 Pelicula con menor duracion
   SELECT MIN(length) as Duracion from "film";
 
+  FROUP BY Y having
+  (agrupar varioes registros segun los valores de la columna)
+   SELECT SupplierID, AVG(Price) as promedio from products 
+   group by SupplierID; 
+
+Sacar el promedio de los precios, pero agrupados por categarioas y uqe no muestrre los valores null.
+SELECT SupplierID, CategoryID, AVG(Price) as promedio from products 
+where CategoryID is not null group by CategoryID; 
+
+HAVING(xuadno usamos funcines de agrupacio no odemos usar where, tenemos que usar having)
+
+SELECT SupplierID, CategoryID, AVG(Price) as promedio from products
+ where CategoryID is not null 
+group by CategoryID having promedio > 40; 
+
+Porduto que mas se vende (tabla )
+SELECt ProductID , sum(Quantity) as total from orderdetails 
+group by ProductID 
+order by total desc; 
+
+la consulta me devuela los prodcutos que se vendieron mas de 50 veces
+SELECt ProductID , sum(Quantity) as total from orderdetails
+ group by ProductID 
+ having total > 50 
+ order by total desc; 
+
+la consukkta que me devuleva el producti mas vendido 
+SELECt ProductID , sum(Quantity) as total from orderdetails
+ group by ProductID ghaving total > 50 
+ order by total desc 
+ limit 1; 
